@@ -1,3 +1,5 @@
+[Deutsche Version](README.md) - [Version française](README-FR.md)
+
 # La Open Source Community
 Questa sezione (repository) raccoglie ogni tipo di discussione e di domanda su argomenti tecnologici riguardanti l'Ie statale e la relativa infrastruttura digitale fiduciaria.
 
