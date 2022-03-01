@@ -27,7 +27,7 @@ Questo repository propone, oltre alla piattaforma di discussione, anche una [pan
 * In questo modo, i responsabili del progetto possono condividere le novità in ogni momento inserendo un nuovo intervento nella cronologia della «issue». 
 * Anche le persone estranee al progetto possono intervenire direttamente nella cronologia con domande o suggerimenti in merito. Ne risultano input d'interesse per tutti i par-tecipanti.
 
-Sempre creando una [issue](https://github.com/e-id-admin/governance-sounding-board/issues), è inoltre possibile registrare «task» concrete per la community che non andrebbero sbrigate sotto forma di discussione, come suggerimenti per migliorare la piattaforma, invocazioni d'aiuto in situazioni specifiche o richieste all'indirizzo del gruppo di progetto o del community management.
+Sempre creando una [issue](https://github.com/e-id-admin/open-source-community/issues), è inoltre possibile registrare «task» concrete per la community che non andrebbero sbrigate sotto forma di discussione, come suggerimenti per migliorare la piattaforma, invocazioni d'aiuto in situazioni specifiche o richieste all'indirizzo del gruppo di progetto o del community management.
 
 # Altre informazioni
 All'occorrenza, nella sezione di codifica sono salvati dati specifici per la Open Source Community; l'impostazione non è ancora stata definita nel dettaglio.
