@@ -27,7 +27,7 @@ Dieses Repository stellt nebst der Diskussionsplattform auch eine [Übersicht vo
 *	Damit ist es für Projektverantwortliche jederzeit möglich, Neuigkeiten aus dem Projekt als weiteren Beitrag im Issue-Textverlauf zu verfassen.
 *	Ebenso können aussenstehende Personen Fragen oder Anregungen zu einem Projekt direkt im Textverlauf erfassen. Damit entstehen Inputs, die alle Beteiligten interessieren könnten.
 
-Unter [Issues](https://github.com/e-id-admin/governance-sounding-board/issues) können zudem «Tasks» für die Community erfasst werden, die schon konkret sind und nicht in Form einer Diskussion abgehandelt werden sollten; sei es mit der Anregung zur Verbesserung der Plattform, Frage nach Hilfe in einer bestimmten Sache oder Wünsche gegenüber dem Projektteam oder dem Community Management.
+Unter [Issues](https://github.com/e-id-admin/open-source-community/issues) können zudem «Tasks» für die Community erfasst werden, die schon konkret sind und nicht in Form einer Diskussion abgehandelt werden sollten; sei es mit der Anregung zur Verbesserung der Plattform, Frage nach Hilfe in einer bestimmten Sache oder Wünsche gegenüber dem Projektteam oder dem Community Management.
 
 # Weitere Daten
 Im Code-Bereich werden nach Bedarf spezifische Daten für die Open Source Community abgelegt. Die genaue Ausgestaltung ist noch offen.
