@@ -1,3 +1,6 @@
+🚧 THIS IS A DRAFT AND MAY BE OBJECT TO CHANGES. OFFICIAL PUBLICATION ON DEC 1, 2023 🚧
+
+
 # Discussion Paper: Initial technological basis for the Swiss national trust infrastructure 
 
 ## Defining a common ground for the Swiss electronic identity and other verifiable credentials
