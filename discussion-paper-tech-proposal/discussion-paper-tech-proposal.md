@@ -66,7 +66,7 @@ A basic architecture was defined and the essential roles and principles has been
 
 **Privacy by design** is addressed by different means:
 - The eID law follows the SSI principles with three different roles: issuers, holders, and verifiers. These roles communicate directly with each other. 
-- The issuer shall have any knowledge about the use of verifiable credentials issued by himself. The eID law defines this privacy-preserving principle.
+- The issuer shall not have any knowledge about the use of verifiable credentials issued by himself. The eID law defines this privacy-preserving principle.
 - The system should protect privacy by default. As the eID law is technology-agnostic, it does not elaborate on what this means precisely.
 
 **Data minimization** is addressed by different means:
