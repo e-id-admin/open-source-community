@@ -71,7 +71,7 @@ The parliamentary motions – asking for a state-issued and state-operated elect
 
 A basic architecture was defined and the essential roles and principles have been brought into the [draft Act](https://www.newsd.admin.ch/newsd/message/attachments/84263.pdf) and have been explained in the [dispatch](https://www.newsd.admin.ch/newsd/message/attachments/84260.pdf).
 
-![Trust_Diamond_SSI_Switzerland](https://github.com/admin-ch-ssi/discussion-paper/assets/12694135/499aa2d1-3538-4b49-9b09-96615994e526)
+![swiss_trust_diamond](https://github.com/e-id-admin/open-source-community/assets/12694135/3fe1b206-7563-403a-ac92-be9e28d582e6)
 *Illustration 1: Swiss Trust Infrastructure*
 
 **Privacy by design** is addressed by different means:
@@ -136,7 +136,7 @@ The proposed solution for managing the revocation of credentials (Status List) i
 
 It is worth noting that Switzerland has an independent legal process, and _Scenario A_ does not mean a direct adoption of EIDAS 2.0 legislation or compatibility. The Architecture Reference Framework is considered a work in progress, and an evolution towards a more privacy-preserving approach is possible. An adoption of _Scenario A_ might lead to easier compatibility with the EU down the line. 
 
-![Scenario_A](https://github.com/admin-ch-ssi/discussion-paper/assets/12694135/34d4314a-8e44-4551-bd20-3efdc6fff3c0)
+![Scenario_A](https://github.com/e-id-admin/open-source-community/assets/12694135/5dcce8b1-85d6-4fd4-a096-8da9d5d9842a)
 *Illustration 2: Scenario A*
 
 **Main benefits for a Swiss Trust Ecosystem:**
@@ -181,7 +181,7 @@ Deciding on _Scenario B_ initially would mean accepting a gap between the Swiss 
 
 The team responsible for e-ID has ascertained that the technology employed in _Scenario B_, despite promising improved privacy preservation, exhibits a lower level of maturity compared to _Scenario A_, which could result in more effort and resources being required to provide the e-ID.      
 
-![Scenario_B](https://github.com/admin-ch-ssi/discussion-paper/assets/12694135/9f6bbb7f-74e6-4591-b971-4c95482217f9)
+![Scenario_BII](https://github.com/e-id-admin/open-source-community/assets/12694135/7de2c66d-dd7e-4351-acbd-6e68d5a9364e)
 *Illustration 3: Scenario B*
 
 **Main benefits for a Swiss Trust Ecosystem:**
@@ -736,3 +736,4 @@ https://github.com/e-id-admin/general/blob/main/meetings/20231109_TAC_Meetingmin
 It is foreseen that the document remains as static as possible during the consultation period. To use the full potential of GitHub, amendments may be made during the consultation period. If new information or errors are discovered, the document can be modified. Any changes will be noted here accordingly. The changes will be visible as commits.
 
 _01.12.2023_ - Initial Publication
+_01.12.2023_ - Scenario B, illustration 3: fix wrong label in diagram for credential format
