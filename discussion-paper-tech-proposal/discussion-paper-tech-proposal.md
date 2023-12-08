@@ -736,4 +736,5 @@ https://github.com/e-id-admin/general/blob/main/meetings/20231109_TAC_Meetingmin
 It is foreseen that the document remains as static as possible during the consultation period. To use the full potential of GitHub, amendments may be made during the consultation period. If new information or errors are discovered, the document can be modified. Any changes will be noted here accordingly. The changes will be visible as commits.
 
 _01.12.2023_ - Initial Publication
+
 _01.12.2023_ - Scenario B, illustration 3: fix wrong label in diagram for credential format
