@@ -19,7 +19,7 @@ In 2021, the Swiss federal government was mandated by parliament to start laying
 
 By involving the broader community, it is intended to hold a discussion on two potential and realistic scenarios described in this document. This document aims to create a synthesised overview of the current knowledge established within the federal government and highlight multiple aspects that may favour the one or other type of technical solution for the architecture of a national trust infrastructure. The benefits and drawbacks are set out, particularly regarding communication and exchange protocols, credential and data formats, and cryptography used for verifiable credentials.
 
-The scenarios presented are meant to stimulate public discussion and provide the e-ID Team with external perspectives on potential ways forward. Even though the content of this document has a technical focus, political and societal aspects will be drivers for a decision. Based on the public reaction and the assessments of the scenarios presented, the e-ID Team will take a decision for a starting point to build the technical foundations for the national trust infrastructure.
+The scenarios presented are meant to stimulate public discussion and provide the e-ID Team with external perspectives on potential ways forward. Even though the content of this document has a technical focus, political and societal aspects will be drivers for a decision. Based on the public reaction and the assessments of the scenarios presented, the Confederation will take a decision for a starting point to build the technical foundations for the national trust infrastructure.
 
 # 2 Background
 ## 2.1  Vision of an e-ID and a Trust Infrastructure for Verifiable Credentials
@@ -36,18 +36,18 @@ As a consequence, a public discussion was held to define the scope of the e-ID a
 
 
 ## 2.2	EU eIDAS 2.0 and the Architecture Reference Framework
-In June 2021, the EU published a draft Act that is similar in its ambitions to those of Switzerland. The EUDI Wallet Architecture and Reference Framework (ARF) was published in January 2023 with the goal of developing an interoperable digital identity wallet solution in the EU. The ARF defines an initial direction for the technical implementation of the eIDAS 2.0 Regulation. The current understanding of the E-ID Project Team is that the ARF is considered an initial version and will evolve further over time.
+In June 2021, the EU published a draft Act that is similar in its ambitions to those of Switzerland. The EUDI Wallet Architecture and Reference Framework (ARF) was published in January 2023 with the goal of developing an interoperable digital identity wallet solution in the EU. The ARF defines an initial direction for the technical implementation of the eIDAS 2.0 Regulation. The current understanding of the e-ID Team is that the ARF is considered an initial version and will evolve further over time.
 
 The ARF offers an approach based on well-known cryptography and technology that is being rapidly standardised. This allows a technically pragmatic way of offering digital identities. It is our assessment that the outlined technologies in the ARF offer a realistic pathway to providing digital identities, and implementation for integrators is transparent and fairly straightforward.
 
-It is worth noting that the draft Act and the technology proposed by the EU ARF do come with downsides. The legislation has been criticised by various experts from academia, civil society and data privacy organisations ([Open Letter Pre-Trilogue Conclusion](https://epicenter.works/en/content/eidas-open-letter-pre-trilogue-conclusion-300-academics-19-ngos)), who have requested that the legislation require unlinkability. The technology as proposed in the ARF offers a high level of conformity with existing security practices, yet has very specific flaws concerning certain aspects of privacy preservation. In particular, the credentials contain a unique technical footprint that is transmitted to verifiers during each verification. This can make it easier to trace a holder’s actions, and to collude if verifiers combine data.
+It is worth noting that the draft Act and the technology proposed by the EU ARF do come with downsides. The legislation has been criticised by various experts from academia, civil society and data privacy organisations ([Open Letter Pre-Trilogue Conclusion](https://epicenter.works/en/content/eidas-open-letter-pre-trilogue-conclusion-300-academics-19-ngos)), who have requested that the legislation require unlinkability. The technology as proposed in the ARF offers a high level of conformity with existing security practices, yet has very specific flaws concerning certain aspects of privacy preservation. In particular, the credentials contain a unique technical fingerprint that is transmitted to verifiers during each verification. This can make it easier to trace a holder’s actions, and to collude if verifiers combine data.
 
-As Switzerland is not a member of the EU, the e-ID project team relies on information made available to the public and provided by the broader e-ID community.
+As Switzerland is not a member of the EU, the e-ID team relies on information made available to the public and provided by the broader e-ID community.
 
 ## 2.3	Practical experience and external expertise collected by the Confederation
-Establishing a nationwide trust infrastructure is a complex undertaking that will take several years to complete. As a result, having a solid technical foundation is of prime importance. This foundation must be based on sound technical principles and be broadly accepted in technical and political terms and by the public. To develop the necessary technical capabilities, it was decided that the Confederation would start building small-scale systems and gain hands-on experience deploying and operating products based on SSI-Technology. Hence, the projects ePerso (electronic employee ID card), the "Public Sandbox Trust Infrastructure" (implementation of a base registry), and eLFA (mobile learners' driver license) were launched. The expertise of the federal E-ID Team, as well as most of the knowledge contributing to this document, was largely gained from these projects.
+Establishing a nationwide trust infrastructure is a complex undertaking that will take several years to complete. As a result, having a solid technical foundation is of prime importance. This foundation must be based on sound technical principles and be broadly accepted in technical and political terms and by the public. To develop the necessary technical capabilities, it was decided that the Confederation would start building small-scale systems and gain hands-on experience deploying and operating products based on SSI-Technology. Hence, the projects ePerso (electronic employee ID card), the "Public Sandbox Trust Infrastructure" (implementation of a base registry), and eLFA (mobile learners' driver license) were launched. The expertise of the federal e-ID team, as well as most of the knowledge contributing to this document, was largely gained from these projects.
 
-To further benefit from the vast knowledge and network of the Swiss e-ID Community, a Technical Advisory Circle (TAC) was formed with the goal of advising the Confederation. The project team would like to take this opportunity to express its sincere thanks to the members of the TAC for their involvement in the process up to now.
+To further benefit from the vast knowledge and network of the Swiss e-ID Community, a Technical Advisory Circle (TAC) was formed with the goal of advising the Confederation. The e-ID team would like to take this opportunity to express its sincere thanks to the members of the TAC for their involvement in the process up to now.
 
 In the run-up to the publication of this document, the TAC held three meetings, discussing various aspects of general challenges, answering to specific questions, and considering potential solutions, and scenarios for providing the Swiss e-ID. It is worth noting that the TAC members have diverse backgrounds, and discussions do not always lead to consensus. Nonetheless, the meetings offer an excellent gauge of the current state of the SSI field.
 
@@ -105,7 +105,7 @@ There are no black-or-white answers to these questions, and a certain level of c
 In the field of self-sovereign identities, there are many initiatives developing different solutions. There are currently few globally acknowledged standards and systems in use; a dominant design has yet to establish itself. To realise the aspiration of an open, publicly used trust infrastructure and scenarios that use the e-ID and extend it with further value-adding services and credentials, it is necessary to define an initial technological framework for Switzerland.
 
 The decision on the technologies will offer a certain degree of stability for the development teams providing the basic underlying infrastructure. Furthermore, those who intend to use the e-ID and its underlying trust infrastructure to independently verify and issue credentials will attain a certain degree of stability for their own software development. 
-To satisfy this, the federal e-ID team wants to take a decision on the core technologies used for credential transmission and credential-related communication, as well as on the format of credentials, in early 2024.    
+To satisfy this, the Confederation wants to take a decision on the core technologies used for credential transmission and credential-related communication, as well as on the format of credentials, in early 2024.    
 
 It is important to state that the concept of digital identities based on SSI is still young, and dynamic changes and further evolution will occur. The decision that will be taken should be understood as a **starting point** that is likely to **evolve**. The e-ID will not be a system developed once and then operated indefinitely without changes. Continual development and adaptation to new circumstances will be required to ensure long-term service continuity, security, and interoperability.
 
@@ -122,7 +122,7 @@ The main points relating to this assessment were mentioned in Chapter 3.2. In su
 Nonetheless, by accepting certain compromises on these points, it will be feasible to provide an e-ID solution to the Swiss public. To come up with a pragmatic way forward, this discussion paper sets out two realistic scenarios and their benefits and drawbacks. Subsequently, the public discussion should provide the Confederation with an outside view of which scenario is initially preferred.
 
 ## 4.2 Scenario A: Following the EU's technical direction
-_Scenario A_ would mean using a subset of the technologies proposed in the European Union's Architecture Reference Framework [ARF](https://digital-strategy.ec.europa.eu/en/library/european-digital-identity-wallet-architecture-and-reference-framework), with the aim of aligning closely with the EU's proposal for implementation. The following technologies would be used in particular: SD-JWTs for credentials and OID4VC/VP as an issuing and presentation protocol. 
+_Scenario A_ would mean using a subset of the technologies proposed in the European Union's Architecture Reference Framework [ARF](https://digital-strategy.ec.europa.eu/en/library/european-digital-identity-wallet-architecture-and-reference-framework), with the aim of aligning closely with the EU's proposal for implementation. The following technologies would be used in particular: SD-JWTs for credentials and OID4VCI/OID4VP as an issuing and presentation protocol. 
 
 The ARF provides a pragmatic technical approach to implementing digital identities and digital identity wallets. It is based on well-known and proven technologies and cryptography, and while the proposed communication protocols are new, they offer easy integration for ecosystem participants and transparency for software developers.
 
@@ -155,31 +155,31 @@ It is worth noting that Switzerland has an independent legal process, and _Scena
 **Technologies**
 -	Credential Format: SD-JWT
 -	Signatures: ECDSA or RSA
--	Communication Standards: OID4VC/VP
+-	Communication Standards: OID4VC
 -	Revocation Service: Status List
 
 
 **Risks & uncertainties**
 -	The EU ARF is not considered to be final yet. To fully comply with the final technology used by the EU, Switzerland might need to delay its national e-ID project by an unknown amount of time.
--	There are concerns about privacy and traceability, but they have not been addressed yet. If public stakeholders do not accept this fact, trust in the system might be undermined.
+-	There are concerns about privacy and traceability, but they have not been addressed yet. This could undermine confidence in the system.
 
 
 ## 4.3 Scenario B
 _Scenario B_ would use a technology stack that aims to offer a higher level of privacy for holders in the ecosystem than that provided in _Scenario A_. At the current time, this would mean choosing an independent technological path for the Swiss trust infrastructure and the national e-ID.
 
-The current hypothesis is that credentials would be issued based on JSON-LD-verifiable credentials using BBS+ signatures. With regard to the communication protocol, the verdict remains uncertain in this particular scenario. Both commonly used protocols in the SSI field (DIDcomm and OID4VP/VC) are compatible with the proposed credential format. DIDcomm boasts the benefit of end-to-end encryption, while OID4VC/VP offers easier integration and is based on standards to which various implementers are accustomed.
+The current hypothesis is that credentials would be issued based on JSON-LD-verifiable credentials using BBS+ signatures. With regard to the communication protocol, the verdict remains uncertain in this particular scenario. Both commonly used protocols in the SSI field (DIDcomm and OID4VC) are compatible with the proposed credential format. DIDcomm boasts the benefit of end-to-end encryption, while OID4VC offers easier integration and is based on standards to which various implementers are accustomed.
 
 By using alternative but less common cryptography, credentials can be issued that enable holders to navigate the future trust ecosystem while leaving fewer digital traces behind. The properties regarding “unlinkability” (see - [Annex Unlinkability](#a3unlinkability)) are met by this technology stack. Credentials would use signature schemes that allow wallets to generate unique proofs for each verification. These proofs contain no constants and therefore do not link back to the originally issued credential. Given that the generation of the proofs is unique per verification, correlation between verifiers is made harder. Nonetheless, it is noteworthy that the disclosed content itself may allow linking and correlation.
 
 As with the technology used in _Scenario A_, selective disclosure is also supported. It seems possible to achieve predicate proofs in BBS+ by using additional sub-protocols. The information available regarding this subject is comparatively limited and would need further scientific research.
 
-When following _Scenario B_ with the goal of achieving non-correlation and unlinkability, further challenges arise that go beyond the presentation of credentials. In the context of _Scenario B_, privacy preserving revocation is another topic which would need to be addressed. Various possibilities could be implemented in order to reduce the traceability of credential usage through revocation services. These pivot around storing revocation data in a government service, delegating the generation of non-revocation proofs to holders, or using validity credentials. Without these efforts, actors can potentially gain knowledge about when a credential was used or when the status of a credential changed (e.g. became revoked). It is important to mention that there is not one solution which fits the needs of all credentials or ecosystem participants. Certain use cases might benefit from being able to track changes in credential status. Hence in _Scenario B_, multiple revocation mechanisms may come in to play.
+When following _Scenario B_ with the goal of achieving non-correlation and unlinkability, further challenges arise that go beyond the presentation of credentials. In the context of _Scenario B_, privacy preserving revocation is another topic which would need to be addressed. Various possibilities could be implemented in order to reduce the traceability of credential usage through revocation services. These pivot around storing revocation data in a system of a government service, delegating the generation of non-revocation proofs to holders, or using validity credentials. Without these efforts, actors can potentially gain knowledge about when a credential was used or when the status of a credential changed (e.g. became revoked). It is important to mention that there is not one solution which fits the needs of all credentials or ecosystem participants. Certain use cases might benefit from being able to track changes in credential status. Hence in _Scenario B_, multiple revocation mechanisms may come in to play.
 
 Standardisation of [JSON-LD Credentials](https://www.w3.org/TR/vc-data-model-2.0/) and [BBS+](https://datatracker.ietf.org/doc/draft-irtf-cfrg-bbs-signatures/) is ongoing. No prediction can be made about when these standards will be considered final.
 
 Deciding on _Scenario B_ initially would mean accepting a gap between the Swiss and EU implementation. Nonetheless in the future, the credential format and signature scheme proposed in this chapter, might be accepted by the EU, in the context of eIDAS 2.0 (relating to credentials that do not represent a person). The proposed _Scenario B_ might therefore still achieve EU conformity at a later point.
 
-The team responsible for e-ID has ascertained that the technology employed in _Scenario B_, despite promising improved privacy preservation, exhibits a lower level of maturity compared to _Scenario A_, which could result in more effort and resources being required to provide the e-ID.      
+The e-ID team has ascertained that the technology employed in _Scenario B_, despite promising improved privacy preservation, exhibits a lower level of maturity compared to _Scenario A_, which could result in more effort and resources being required to provide the e-ID.      
 
 ![Scenario_BII](https://github.com/e-id-admin/open-source-community/assets/12694135/7de2c66d-dd7e-4351-acbd-6e68d5a9364e)
 *Illustration 3: Scenario B*
@@ -203,7 +203,7 @@ The team responsible for e-ID has ascertained that the technology employed in _S
 **Technologies**
 -	Credential Format: JSON-LD
 -	Signatures: BBS+
--	Communication Standards: OID4VC/VP or DIDCOMM
+-	Communication Standards: OID4VC or DIDCOMM
 -	Revocation Service: Open
 
 **Risks & uncertainties**
@@ -216,9 +216,9 @@ The team responsible for e-ID has ascertained that the technology employed in _S
 
 In conclusion, we see that there are two potential paths forward that Switzerland can follow to offer a national e-ID. Both have their unique advantages and disadvantages. In a simplified manner, they can be summed up in the following way:
 
-_Scenario A_: Commonly known cryptography is used. Technical interoperability with the EU should be achievable in a straightforward manner. A broad community, existing libraries and approved cryptography should simplify development. Regarding privacy, holders have full control over what content of a credential (selective disclosure) they share with which actor. Given that the credentials used have a constant footprint and the system for revocation does not offer full privacy preservation, holders can be tracked in an easier manner after presenting a credential to a verifier. Relying heavily on the EU ARF, especially since it is not a final version, might not offer the stability desired.
+_Scenario A_: Commonly known cryptography is used. Technical interoperability with the EU should be achievable in a straightforward manner. A broad community, existing libraries and approved cryptography should simplify development. Regarding privacy, holders have full control over what content of a credential (selective disclosure) they share with which actor. Given that the credentials used have a constant fingerprint and the system for revocation does not offer full privacy preservation, holders can be tracked in an easier manner after presenting a credential to a verifier. Relying heavily on the EU ARF, especially since it is not a final version, might not offer the stability desired.
 
-_Scenario B_: The cryptography used is less common and less extensively researched. Technical interoperability in the EU could prove more challenging. Nonetheless, it could still be achievable by converting the system or additionally issuing an eIDAS 2.0-conforming credential at a later stage. Given the higher aspiration for privacy preservation, implementations (e.g. revocation service) have the potential to become more complex. More effort might have to be invested in creating libraries and security attestation. Regarding privacy, holders have full control over what content of a credential (selective disclosure) they share with which actor. Given that more sophisticated cryptography is used and credentials have a dynamic footprint during each presentation, it should be harder to track a holder's actions after verification. If implementation fails, a fallback to _Scenario A_ is viable.
+_Scenario B_: The cryptography used is less common and less extensively researched. Technical interoperability in the EU could prove more challenging. Nonetheless, it could still be achievable by converting the system or additionally issuing an eIDAS 2.0-conforming credential at a later stage. Given the higher aspiration for privacy preservation, implementations (e.g. revocation service) have the potential to become more complex. More effort might have to be invested in creating libraries and security attestation. Regarding privacy, holders have full control over what content of a credential (selective disclosure) they share with which actor. Given that more sophisticated cryptography is used and credentials have a dynamic fingerprint during each presentation, it should be harder to track a holder's actions after verification. If implementation fails, a fallback to _Scenario A_ is viable.
 
 In order to provide a product which fulfils user expectations (privacy and interoperability), there is a high probability that in its final state the e-ID and the underlying infrastructure will have to cover both of the presented scenarios.
 
@@ -240,11 +240,11 @@ Aspects not currently considered in the scenarios:
 # 5 Public discussion of this paper and further process
 Now that we have reached this chapter, your opinion is needed!
 
-To arrive at a well-informed decision, the e-ID team is seeking input and perspectives from a diverse array of public stakeholders. Please take the proposed scenarios as a basis for your feedback and consider that the final decision is a starting point for the medium-term technical development. The e-ID team is convinced that both variants cover the principal expectations for a verifiable credential trust ecosystem. From your standpoint, what characteristics and features are most valuable and must be achieved? Which trade-offs and risks are acceptable, why, and for how long?
+To arrive at a well-informed decision, the e-ID team is seeking input and perspectives from a diverse array of private and public stakeholders. Please take the proposed scenarios as a basis for your feedback and consider that the final decision is a starting point for the medium-term technical development. The e-ID team is convinced that both variants cover the principal expectations for a verifiable credential trust ecosystem. From your standpoint, what characteristics and features are most valuable and must be achieved? Which trade-offs and risks are acceptable, why, and for how long?
 
 **Cornerstones of the public discussion**
 -	The public debate starts with the presentation of this paper at the “e-ID participation” meeting on 1 December 2023.
--	The written statements have to be entered in our feedback form at https://findmind.ch/c/XFvu-a7c6 by 3 January 2024. Please take a look at the form _before_ you start writing your feedback.
+-	The written statements have to be entered in our feedback form at https://findmind.ch/c/XFvu-a7c6 by January 15, 2024. Please take a look at the form _before_ you start writing your feedback.
 -	Written discussion can be held on GitHub: https://github.com/e-id-admin/open-source-community/discussions
 
 **The main questions for your feedback**
@@ -264,7 +264,7 @@ The various inputs will be considered, allowing the Confederation to define the 
 
 # Annex
 
-## A.1	Hands-on experience by the e-ID Team
+## A.1	Hands-on experience by the e-ID team
 ### Proof of Concept ePerso
 The ePerso is the first SSI proof of concept realized by the federal government. It is a digital employee card that states that the holder of the credential is an employee of the federal government. This proof of concept is built on the Hyperledger Indy Stack.
 
@@ -286,13 +286,13 @@ Even though the base technology is not based on newer technological initiatives,
 ### eLFA
 The eLFA is the pilot project for the electronic learners' driver licence. This project will be the first developed by the confederation that will be used by users in the public. 
 
-The primary goal is to explore how unbiased users adopt SSI-based use cases. The technologies SD-JWTs, OID4VC/VP and Status List are utilized, this reflects the mainstream ARF setup, as proposed in _Scenario A_. As this pilot is not live yet, the lessons learned are from the development stage of the project.
+The primary goal is to explore how unbiased users adopt SSI-based use cases. The technologies SD-JWTs, OID4VC and Status List are utilized, this reflects the mainstream ARF setup, as proposed in _Scenario A_. As this pilot is not live yet, the lessons learned are from the development stage of the project.
 
 The complexity of the utilized technologies is lower compared to Hyperledger Indy. Additionally, reproducibility for developers is greatly increased. Given the technologies closer alignment to existing solutions in corporate IT environments, reaching conformance with internal governance is simplified.
 
 ## A.2 Specific learnings related to technologies
 ### Hyperledger Indy Stack
-Hyperledger Indy was utilized by the federal e-ID Team for the pilot projects ePerso and the Public Sandbox Trust Infrastructure. 
+Hyperledger Indy was utilized by the federal e-ID team for the pilot projects ePerso and the Public Sandbox Trust Infrastructure. 
 
 The “privacy by design” features, especially regarding unlinkability and non-correlation, are rated highly. The technology is considered to be very advanced regarding the implementation of these principles. Zero-knowledge proofs as well as zero-knowledge predicates are supported.
 
@@ -305,9 +305,9 @@ While the functionality Hyperledger Indy offers is good, it was detected that th
 Given the fact that DLT and blockchain-based solutions have grown out of favour in the public, a decline in the activity of the Hyperledger community can be detected, and effort is being directed towards alternative solutions.
 The public consultation of the first e-ID pre-draft Act showed that a distributed operating model (utilizing nodes and trust anchors distributed over multiple organizations) was not requested. Based on these various findings, it was decided to exclude Hyperledger Indy from the presented scenarios.
 
-### OpenID4VC/VP
+### OpenID4VC
 
-This section contains the current experiences of the e-ID Team regarding the use of OID4VC/VP. It is important to note that the team has not implemented the entire standard but used specific components. Overall, it's an emerging standard, with multiple international stakeholders driving further evolution.
+This section contains the current experiences of the e-ID team regarding the use of OID4VC. It is important to note that the team has not implemented the entire standard but used specific components. Overall, it's an emerging standard, with multiple international stakeholders driving further evolution.
 
 **Issuing:**
 The credential is created and the content known by the issuer. It is then transmitted to the holder and can then be shared with verifiers by the holder. No other third parties are needed or involved in this process.
@@ -328,10 +328,10 @@ By default, credentials are immutable. Any alteration would invalidate the signa
 A status list can be used for other purposes, not only revocation. For example, suspension of a credential is also supported.
 The lists are an efficient method for storing and distributing information, as they can encompass numerous credentials, with each occupying just one _bit_ in the list.
 
-**Trust registries:** The team detected no currently established standards or practical implementations for trust registries. 
+**Trust registries:** The e-ID team detected no currently established standards or practical implementations for trust registries. 
 
 ###	Other Candidates
-The following is a list of further technologies related to the field of SSI, which could turn out to be candidates for technical implementations and were reviewed by the e-ID Team. They merit mentioning, even if they do not play a role in proposed scenarios.
+The following is a list of further technologies related to the field of SSI, which could turn out to be candidates for technical implementations and were reviewed by the e-ID team. They merit mentioning, even if they do not play a role in proposed scenarios.
 
 #### KERI 
 KERI (Key Event Receipt Infrastructure) is a distributed key and identity management system that is sometimes proposed as a possible base layer for SSI systems. It does not rely on distributed ledgers but claims to provide similar security guarantees. KERI has not been used a lot in practice so far. GLEIF, the Global Legal Entity Identifier Foundation, is the first organization to have started using KERI.
@@ -365,7 +365,7 @@ As mentioned in chapter 3, “Design Principles” _privacy by design_ is a requ
 Linkability is a crucial concern in systems designed following the principle of “privacy by design”, which seek to embed privacy considerations directly into the architecture implemented and the core technology utilized. When discussing linkability, we refer to the potential for different sets of data, provided to an actor during separate events within the SSI ecosystem, to be connected to one another. 
 Such connections are made possible through constant unique identifiers or patterns within the data that are not related to the actual content of the credentials (like name, surname, date of birth, or passport number) but are intrinsic to the data format itself.
 
-The risk of linkability arises from the inclusion of certain fields or metadata that are essential for maintaining the integrity of a credential or enabling the verifier to fulfil their verification duties. However, even when these fields do not directly disclose personal information, they can still make an identity traceable if they remain constant across multiple presentations. It can be argued that this goes against the principles of privacy by design, as it creates a digital footprint that can be used to track and profile individuals. The optimum goal is to ensure that the verification process does not compromise an individual’s privacy by enabling their activities to be linked over time and across different contexts.
+The risk of linkability arises from the inclusion of certain fields or metadata that are essential for maintaining the integrity of a credential or enabling the verifier to fulfil their verification duties. However, even when these fields do not directly disclose personal information, they can still make an identity traceable if they remain constant across multiple presentations. It can be argued that this goes against the principles of privacy by design, as it creates a digital fingerprint that can be used to track and profile individuals. The optimum goal is to ensure that the verification process does not compromise an individual’s privacy by enabling their activities to be linked over time and across different contexts.
 
 ### SD-JWT
 SD-JWTs (Selective Disclosure JSON Web Tokens) contain multiple fields which can make a credential trackable. 
@@ -595,7 +595,7 @@ In summary, we can observe the following:
 Looking at the different credential formats and the signature schemes they use (Anoncreds based on CL-Signatures, SD-JWTs based on ECDSA, and JsonLD VCs based on BBS+), we detect a difference regarding the digital traces generated while presenting credentials to verifiers. 
 Simplified, we can currently categorize credential formats into two categories:
 
-* **Linkable Credentials:** While presenting a credential to a verifier, a proof directly based on the initially issued credential is generated. This results in the same persistent technical footprint that is generated during each verification. This allows the linking or correlation of credential use over time, regardless of the actual credential data.
+* **Linkable Credentials:** While presenting a credential to a verifier, a proof directly based on the initially issued credential is generated. This results in the same persistent technical fingerprint that is generated during each verification. This allows the linking or correlation of credential use over time, regardless of the actual credential data.
 
 * **Unlinkable Credentials:** While presenting a credential to a verifier, by using more sophisticated cryptography, a unique proof per verification is generated. This results in a unique technical fingerprint that is generated dynamically for each verification. This means linking or correlating based on the signatures presented by the holders is impossible.
 
@@ -685,6 +685,12 @@ And its preceding work:
 https://docs.google.com/spreadsheets/d/1Z4cYfjbbE-rABcfC-xab8miocKLomivYMUFibOh9BVo
 https://hackmd.io/ikhimdHLRy247YgRhNIXmw?both
 
+- OID4VCI:
+https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0.html
+
+- OID4VP:
+https://openid.net/specs/openid-4-verifiable-presentations-1_0.html#section-6.4
+
 - ETSI technical report comparing selective disclosure mechanisms, including unlinkability.
 https://portal.etsi.org/webapp/WorkProgram/Report_WorkItem.asp?WKI_ID=67975
 
@@ -738,3 +744,5 @@ It is foreseen that the document remains as static as possible during the consul
 _01.12.2023_ - Initial Publication
 
 _01.12.2023_ - Scenario B, illustration 3: fix wrong label in diagram for credential format
+
+_12.12.2023_ - Use OID4VC instead of OID4VC/VP; 	- extension deadline; unify e-ID team; wording fingerprint not footprint; decision by "Confederation"; minor linguistic improvements
