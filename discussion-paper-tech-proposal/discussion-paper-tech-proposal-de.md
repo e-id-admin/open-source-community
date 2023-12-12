@@ -121,7 +121,7 @@ Die wichtigsten Punkte für die Beurteilung wurden in Kapitel 3.2 erwähnt. Zusa
 Wenn man in diesen Punkten gewisse Kompromisse eingeht, wird es dennoch möglich sein, der Schweizer Bevölkerung eine E-ID-Lösung anzubieten. Um einen pragmatischen Weg zu finden, werden in diesem Diskussionspapier zwei realistische Szenarien mit ihren Vor- und Nachteilen aufgezeigt. Die öffentliche Diskussion soll dem Bund eine Aussensicht liefern, welches Szenario für den Start bevorzugt wird.
 
 ## 4.2 Szenario A: Der technischen Richtung der EU folgen
-_Szenario A_ würde bedeuten, dass ein Teil der im Architecture Reference Framework [ARF](https://digital-strategy.ec.europa.eu/en/library/european-digital-identity-wallet-architecture-and-reference-framework) der Europäischen Union vorgeschlagenen Technologien verwendet wird, mit dem Ziel, sich eng an den Umsetzungsvorschlag der EU anzulehnen. Konkret sollen die folgenden Technologien verwendet werden: SD-JWTs für Berechtigungsnachweise und OID4VC/VP als Ausstellungs- und Präsentationsprotokoll. 
+_Szenario A_ würde bedeuten, dass ein Teil der im Architecture Reference Framework [ARF](https://digital-strategy.ec.europa.eu/en/library/european-digital-identity-wallet-architecture-and-reference-framework) der Europäischen Union vorgeschlagenen Technologien verwendet wird, mit dem Ziel, sich eng an den Umsetzungsvorschlag der EU anzulehnen. Konkret sollen die folgenden Technologien verwendet werden: SD-JWTs für Berechtigungsnachweise und OID4VCI/VP als Ausstellungs- und Präsentationsprotokoll. 
 
 Die ARF bietet einen pragmatischen technischen Ansatz für die Implementierung digitaler Identitäten und elektronischer Brieftaschen (Wallets). Er basiert auf bekannten und bewährten Technologien und Kryptographie, und obwohl die vorgeschlagenen Kommunikationsprotokolle neu sind, bieten sie eine einfache Integration für Teilnehmer des Ökosystems und Transparenz für Softwareentwickler.
 
@@ -154,7 +154,7 @@ Es ist anzumerken, dass die Schweiz eigenständig Recht setzt und _Szenario A_ k
 **Technologien**
 - Format der Nachweise: SD-JWT
 - Signaturen: ECDSA oder RSA
-- Kommunikationsstandards: OID4VC/VP
+- Kommunikationsstandards: OID4VC
 - Revokationsmechanismus: Statusliste
 
 
@@ -166,7 +166,7 @@ Es ist anzumerken, dass die Schweiz eigenständig Recht setzt und _Szenario A_ k
 ## 4.3 Szenario B
 In _Szenario B_ werden Technologien verwendet, welche den Inhaberinnen im Ökosystem ein höheres Mass an Privatsphäre bieten sollen als in _Szenario A_. Zum aktuellen Zeitpunkt würde dies bedeuten, dass ein eigenständiger technologischer Pfad für die Schweizer Vertrauensinfrastruktur und die nationale E-ID gewählt würde.
 
-Gemäss aktuellem Stand würden elektronische Nachweise auf der Grundlage von JSON-LD Verifiable Credentials unter Verwendung von BBS+-Signaturen ausgestellt werden. Was das Kommunikationsprotokoll betrifft, so ist die Wahl für dieses Szenario noch offen. Beide gängigen Protokolle im SSI-Bereich (DIDcomm und OID4VP/VC) sind mit dem vorgeschlagenen Nachweisformat kompatibel. DIDcomm bietet den Vorteil einer End-zu-End-Verschlüsselung, während OID4VC/VP eine einfachere Integration bietet und auf Standards basiert, die vielen Integratoren vertraut sind.
+Gemäss aktuellem Stand würden elektronische Nachweise auf der Grundlage von JSON-LD Verifiable Credentials unter Verwendung von BBS+-Signaturen ausgestellt werden. Was das Kommunikationsprotokoll betrifft, so ist die Wahl für dieses Szenario noch offen. Beide gängigen Protokolle im SSI-Bereich (DIDcomm und OID4VC) sind mit dem vorgeschlagenen Nachweisformat kompatibel. DIDcomm bietet den Vorteil einer End-zu-End-Verschlüsselung, während OID4VC eine einfachere Integration bietet und auf Standards basiert, die vielen Integratoren vertraut sind.
 
 Durch die Verwendung einer alternativen, aber weniger verbreiteten Kryptographie können Nachweise ausgestellt werden, die es den Inhaberinnen ermöglichen, sich im künftigen Vertrauens-Ökosystem zu bewegen und dabei weniger digitale Spuren zu hinterlassen. Die Anforderungen in Bezug auf «Unlinkability» (siehe - [Anhang Unlinkability](https://github.com/e-id-admin/open-source-community/blob/main/discussion-paper-tech-proposal/discussion-paper-tech-proposal.md#a3unlinkability)) werden von diesen Technologien erfüllt. Die digitalen Nachweise verwenden Signaturverfahren, die es den Wallets ermöglichen, für jede Überprüfung eine einzigartige Nachweis-Präsentation zu erzeugen. Diese Nachweis-Präsentationen enthalten keine Konstanten und sind daher nicht mit dem ursprünglich ausgestellten Berechtigungsnachweis verknüpft. Da die Generierung der Nachweise für jede Überprüfung einzigartig ist, wird die Korrelation auch zwischen Verifikatorinnen erschwert. Nicht berücksichtigt ist dabei, dass der offengelegte Inhalt selbst eine Verknüpfung und Korrelation ermöglichen könnte.
 
@@ -202,7 +202,7 @@ Das E-ID-Team hat festgestellt, dass die in _Szenario B_ eingesetzte Technologie
 **Technologien**
 - Nachweis-Format: JSON-LD
 - Signaturen: BBS+
-- Kommunikationsstandards: OID4VC/VP oder DIDCOMM
+- Kommunikationsstandards: OID4VC oder DIDCOMM
 - Revokationsmechanismus: Offen
 
 **Risiken und Unsicherheiten**
