@@ -7,7 +7,7 @@
 - [Contexte](#2-Contexte)
 - [Principes de conception et critères](#3-Principes-de-conception-et-critères)
 - [Décision sur les scénarios technologiques](#4-Décision-sur-les-scénarios-technologiques)
-- [Discussion publique sur ce document et la suite du processus](#5-Discussion-publique-de-ce-document-et-de-la-suite-du-processus)
+- [Débat public sur le présent document et suite du processus](#5-d%C3%A9bat-public-sur-le-pr%C3%A9sent-document-et-suite-du-processus)
 - [Annexe](#Annexe)
 - [Références](#Références)
 - [Changelog](#Changelog)
@@ -275,4 +275,4 @@ https://github.com/e-id-admin/open-source-community/blob/main/discussion-paper-t
 
 Les corrections linguistiques du document français sont documentées ici.
 
-13.12.2023_ - Publication de la version française
+_13.12.2023_ - Publication de la version française
