@@ -5,7 +5,7 @@
 #### Table des matières
 - [Objet du document](#1-Objet-du-document)
 - [Contexte](#2-Contexte)
-- [Principes de conception et critères](#3Principes de conception et critères)
+- [Principes de conception et critères](#3-Principes-de-conception-et-critères)
 - [Décision sur les scénarios technologiques](#4-Décision-sur-les-scénarios-technologiques)
 - [Discussion publique sur ce document et la suite du processus](#5-Discussion-publique-de-ce-document-et-de-la-suite-du-processus)
 - [Annexe](#Annexe)
@@ -259,3 +259,20 @@ Toutes les réponses seront publiées à l'issue de la période de consultation,
 Pour les questions, les réflexions communes et les demandes d'information en cas de doute, utilisez le forum public sur [GitHub](https://github.com/e-id-admin/open-source-community/discussions). Nous estimons que ce débat public est une fois de plus l'occasion pour chacun (l'équipe du projet e-ID et la communauté) d'élargir ses perspectives.
 
 Les différentes contributions seront prises en compte, ce qui permettra à la Confédération de définir la pile technologique initiale (protocoles, formats et cryptographie) au début de l'année 2024. Cette décision jettera les bases pour la conception de l'infrastructure de confiance suisse pour les moyens de preuves électroniques vérifiables. La définition des spécifications détaillées attendues des parties externes pour le futur écosystème pourra alors être abordée. La réalisation de l'infrastructure de confiance suisse commencera, l'objectif étant de lancer l'e-ID en 2026.
+
+
+# Annexe
+Toutes les annexes ne sont disponibles que dans la version originale anglaise du document :</br>.
+https://github.com/e-id-admin/open-source-community/blob/main/discussion-paper-tech-proposal/discussion-paper-tech-proposal.md#annex
+
+# Références
+Les références sont disponibles dans la version originale anglaise du document:</br>
+https://github.com/e-id-admin/open-source-community/blob/main/discussion-paper-tech-proposal/discussion-paper-tech-proposal.md#references
+
+# Changelog
+Les modifications de contenu sont répertoriées dans la version originale anglaise du document :</br>
+https://github.com/e-id-admin/open-source-community/blob/main/discussion-paper-tech-proposal/discussion-paper-tech-proposal.md#changelog
+
+Les corrections linguistiques du document français sont documentées ici.
+
+13.12.2023_ - Publication de la version française
