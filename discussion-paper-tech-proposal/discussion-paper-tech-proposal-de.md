@@ -1,3 +1,5 @@
+[Original version english](https://github.com/e-id-admin/open-source-community/blob/main/discussion-paper-tech-proposal/discussion-paper-tech-proposal.md) - [Version française](https://github.com/e-id-admin/open-source-community/blob/main/discussion-paper-tech-proposal/discussion-paper-tech-proposal-fr.md)
+
 # Diskussionspapier: Erste technologische Umsetzung für die Schweizer Vertrauensinfrastruktur
 
 ### Festlegen einer gemeinsamen Grundlage für die elektronische Identität der Schweiz und andere elektronischen Nachweise
