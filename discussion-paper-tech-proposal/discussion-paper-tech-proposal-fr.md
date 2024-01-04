@@ -1,3 +1,5 @@
+[Original version english](https://github.com/e-id-admin/open-source-community/blob/main/discussion-paper-tech-proposal/discussion-paper-tech-proposal.md) - [Deutsche Version](https://github.com/e-id-admin/open-source-community/blob/main/discussion-paper-tech-proposal/discussion-paper-tech-proposal-de.md)
+
 # Document de travail : Base technologique initiale pour l'infrastructure de confiance suisse
 
 ### Définition d'une base commune pour l'identité électronique suisse et d'autres moyens de preuves électroniques
