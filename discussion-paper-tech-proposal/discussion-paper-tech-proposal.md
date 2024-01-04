@@ -1,3 +1,5 @@
+[Deutsche Version](https://github.com/e-id-admin/open-source-community/blob/main/discussion-paper-tech-proposal/discussion-paper-tech-proposal-de.md) - [Version française](https://github.com/e-id-admin/open-source-community/blob/main/discussion-paper-tech-proposal/discussion-paper-tech-proposal-fr.md)
+
 # Discussion Paper: Initial technological basis for the Swiss trust infrastructure
 
 ### Defining common ground for the Swiss electronic identity and other verifiable credentials
