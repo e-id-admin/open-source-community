@@ -9,6 +9,7 @@ To participate and provide feedback, we encourage you to either create pull requ
 ## Current RFCs
 
 - [BLS Accumulators](accumulators)
+- [Swiss OCA](oca)
 
 
 ## Graduated or terminated RFCs
