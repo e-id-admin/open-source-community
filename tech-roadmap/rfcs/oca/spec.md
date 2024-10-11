@@ -53,7 +53,7 @@ And the context of OCA Bundle, it adds the following constraints:
 
 - the Branding Overlay **MUST** use the value `aries/overlays/branding/1.1` in the `type` attribute.
 - the Branding Overlay **MUST** only use the embedded form of media in form of data URLs.
-- The primary and secondary attributes of the Branding Overlay determine which attribute value from the Capture Base will be displayed. If the defined attribute does not exist in the Capture Base or in the Verifiable Credential, the value of the corresponding Branding Overlay attribute is displayed instead.
+- The primary and secondary attributes of the Branding Overlay determine which attribute value from the Capture Base are ment to be the attributes used for graphic vizualizations. If the defined attributes do not exist in the Capture Base or in the Verifiable Credential, the values of the corresponding Branding Overlay attributes can be used.
 
 **Example of the Branding Overlay**
 
