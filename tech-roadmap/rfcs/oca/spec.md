@@ -49,7 +49,7 @@ This specification adds additional attributes to the Branding Overlay to further
 - the Branding Overlay **MAY** use the `language` attribute from the core OCA specification.
 - the Branding Overlay **MAY** use an additional `theme` attribute.
 
-And and the context of OCA Bundle, it adds the following constraints:
+And the context of OCA Bundle, it adds the following constraints:
 
 - the Branding Overlay **MUST** use the value `aries/overlays/branding/1.1` in the `type` attribute.
 - the Branding Overlay **MUST** only use the embedded form of media in form of data URLs.
