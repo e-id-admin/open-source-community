@@ -1,4 +1,4 @@
-# Swiss e-ID and trust infrastructure: Initial implemtation
+# Swiss e-ID and trust infrastructure: Initial implementation
 
 #### Table of contents
 - [Current Situation](#Current-Situation)
