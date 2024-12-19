@@ -26,7 +26,7 @@ The domain of digital identities is developing at a rapid pace. While the Confed
 
 | Aspect      | Current Hypothesis   | Link   | Public Beta Support   | Initial Go Live Support |  
 | ----------- | ----------- |----------- |----------- |----------- |
-| **Identifiers**       | Decentralized Identifiers (**DIDs**) v1.0 according to W3C <br> DID Method: **did:tdw**    | W3C: https://www.w3.org/TR/did-core/ <br> Method: Trust DID Web - https://identity.foundation/trustdidweb/ | **SELECTED** <br> Hosted on central base registry provided by Confederation | **CANDIDATE** Final decision for productive system pending |
+| **Identifiers**       | Decentralized Identifiers (**DIDs**) v1.0 according to W3C <br> DID Method: **did:tdw/did:webvh**    | W3C: https://www.w3.org/TR/did-core/ <br> Method: Trust DID Web - https://identity.foundation/trustdidweb/ | **SELECTED** <br> Hosted on central base registry provided by Confederation | **CANDIDATE** Final decision for productive system pending |
 | **Status Mechanisms**       | Statuslist | Statuslist: https://datatracker.ietf.org/doc/draft-ietf-oauth-status-list/ | **SELECTED** | **HIGH** |
 | **Trust Protocol**       | Trust Protocol based on VCs |  [Trust protocol based on VCs](https://github.com/e-id-admin/open-source-community/blob/main/tech-roadmap/rfcs/trust-protocol/trust-protocol.md)  | **SELECTED** <br> Initial support of the "identity" trust statement by Confederation | **HIGH** <br> Additional support of issuer & verifier legitimacy (per VC schema) |
 | **Communication Protocol (Issuance/Verification)**       | OID4VC/OID4VP	  | Issuance: https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0-ID1.html <br> Verification: https://openid.net/specs/openid-4-verifiable-presentations-1_0-ID2.html  | **SELECTED** <br> In accordance with [Swiss profile](https://github.com/admin-ch-ssi/specifications-to-publish/blob/main/swiss_profile.md) | **HIGH** |
@@ -56,7 +56,8 @@ The delivery of all open points noted here is currently undated.
 
 The Confederation intends to implement the proposed “Identifiers” in the e-ID Act (https://www.fedlex.admin.ch/eli/fga/2023/2843/de) as decentralized identifiers according to the W3C specification. 
 
-For the Public Beta system the DID Method **did:tdw** has been chosen. It benefits from similar simplicity to did:web while adding additional security properties, in particular data integrity, which helps to operate a trustworthy ecosystem. 
+For the Public Beta system the DID Method **did:tdw** has been chosen. It benefits from similar simplicity to did:web while adding additional security properties, in particular data integrity, which helps to operate a trustworthy ecosystem. This version of the specification refers to the OLD name for the [DID Method V0.3](https://identity.foundation/didwebvh/v0.3/). The DID Method name has since changed to **did:webvh** (“did:web + Verifiable History”).
+
 Given the centralized role of the base registry in the Swiss trust infrastructures a solution is necessary that makes it impossible for the central instance to change the DID document of an ecosystem participant and therefore ensures trustworthiness in the data provided. In addition, the integrity of the DID document is verifiable on the client side. 
 
 Before the final decision regarding the productive DID Method is be taken, additional clarifications are necessary.
