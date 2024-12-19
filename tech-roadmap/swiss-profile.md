@@ -25,7 +25,7 @@ The target audience of the document are early adopters who want to use the Publi
 ## Scope
 The following specifications are in scope of this Swiss Profile for the Public Beta Infrastructure:
 
-- Issuer & Verifier identification (DID:TDW) 
+- Issuer & Verifier identification (DID:TDW, respectively the renamed method DID:WEBVH) 
 - Protocol for issuance of the Verifiable Credentials (OID4VCI)
 - Protocol for online presentation of Verifiable Credentials (OID4VP)
 - Credential Format (SD-JWT VC)
@@ -52,7 +52,7 @@ The following table defines which specification must be supported by an actor (I
 |-------------------|----------|----------|----------|
 | OID4VP            | **MAY**  | **MUST** | **MUST** |
 | OID4VCI           | **MUST** | **MUST** | **MAY**  |
-| DID:TDW           | **MUST** | **MUST** | **MUST** |
+| DID:TDW/DID:WEBVH | **MUST** | **MUST** | **MUST** |
 | SD-JWT VC profile | **MUST** | **MUST** | **MUST** |
 | Status List       | **MUST** | **MUST** | **MUST** |
 | Trust Protocol    | **MAY**  | **MUST** | **MUST** |
@@ -60,7 +60,7 @@ The following table defines which specification must be supported by an actor (I
 ## Issuer & Verifier Identification
 Issuers and Verifiers use [DID:TDW](https://identity.foundation/trustdidweb/) version 0.3 as identifiers.
 
-### DID:TDW
+### DID:TDW/DID:WEBVH
 Implementations of this profile:
 
 - **MUST** set `portable` to `false` in the first DID log entry.
@@ -295,7 +295,7 @@ Measures to address this challenge are envisioned for a later release, for examp
 
 ## References
 
-**DID:TDW**<br/>
+**DID:TDW/DID:WEBVH**<br/>
 https://identity.foundation/trustdidweb/
 
 **OpenID4VCI**<br/>
