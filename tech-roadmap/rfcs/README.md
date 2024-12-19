@@ -10,6 +10,7 @@ To participate and provide feedback, we encourage you to either create pull requ
 
 - [BLS Accumulators](accumulators)
 - [Swiss OCA](oca)
+- [Trust protocol based on VCs](trust-protocol)
 
 
 ## Graduated or terminated RFCs
