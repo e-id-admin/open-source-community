@@ -110,7 +110,7 @@ Both sending Credential Offer same-device and cross-device are supported.
     - `locale` **MAY** be the locale of the self-attested Issuer metadata
 - `credential_configurations_supported` **MUST** contain
     - `format` **MUST** be `vc+sd-jwt`
-    - `cryptographic_binding_methods_supported` **MUST** be `did:tdw`
+    - `cryptographic_binding_methods_supported` **MUST** be `jwk`
     - `credential_signing_alg_values_supported` **MUST** be
         - `ES256`
     - `proof_types_supported` **MAY** be defined
