@@ -89,7 +89,7 @@ And in the context of OCA Bundle, it adds the following constraints:
 JSONPath allows the use of Regular Expressions and the use of function extensions. Both introduce important security risks, which implementors should mitigate.
 This specification only uses the following parts of JSONPath:
 
-- Absolut [Child Segments](https://www.rfc-editor.org/rfc/rfc9535.html#name-child-segment) which starts with the [Root Identifier](https://www.rfc-editor.org/rfc/rfc9535.html#root-identifier)
+- Absolute [Child Segments](https://www.rfc-editor.org/rfc/rfc9535.html#name-child-segment) which starts with the [Root Identifier](https://www.rfc-editor.org/rfc/rfc9535.html#root-identifier)
 - The [Name Selector](https://www.rfc-editor.org/rfc/rfc9535.html#name-name-selector), [Wildcard Selector](https://www.rfc-editor.org/rfc/rfc9535.html#name-wildcard-selector) and the [Index Selector](https://www.rfc-editor.org/rfc/rfc9535.html#name-index-selector)
 
 ### Aries Branding Overlay update proposal
@@ -126,7 +126,7 @@ And in the context of OCA Bundle, it adds the following constraints:
 ```
 
 > [!NOTE]
-> It is up to the Wallet implementors to interpret the Branding Overlay attributes they need to implement their design und style guidelines.
+> It is up to the Wallet implementors to interpret the Branding Overlay attributes they need to implement their design and style guidelines.
 
 <a id="branding-overlay-templating"></a>
 
