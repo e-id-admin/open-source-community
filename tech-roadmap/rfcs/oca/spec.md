@@ -27,16 +27,16 @@ The JSON object **MUST** contain the following properties:
     "capture_bases":[
         {
             "type":"spec/capture_base/1.0",
-            "digest":"IAKfY+vUaevuIqDQreQyd6YYpALJIH1IZMPjpX4tOOuQ",
+            "digest":"IAKfY-vUaevuIqDQreQyd6YYpALJIH1IZMPjpX4tOOuQ",
             "attributes":{
                 "firstname":"Text",
                 "lastname":"Text",
-                "pets":"Array[refs:IKLvtGx1NU0007DUTTmI/6Zw+hnGRFicZ5R4vAxg4j2j]"
+                "pets":"Array[refs:IKLvtGx1NU0007DUTTmI_6Zw-hnGRFicZ5R4vAxg4j2j]"
             }
         },
         {
             "type":"spec/capture_base/1.0",
-            "digest":"IKLvtGx1NU0007DUTTmI/6Zw+hnGRFicZ5R4vAxg4j2j",
+            "digest":"IKLvtGx1NU0007DUTTmI_6Zw-hnGRFicZ5R4vAxg4j2j",
             "attributes":{
                 "race":"Text",
                 "name":"Text"
@@ -46,7 +46,7 @@ The JSON object **MUST** contain the following properties:
     "overlays":[
         {
             "type":"spec/overlays/meta/1.0",
-            "capture_base":"IAKfY+vUaevuIqDQreQyd6YYpALJIH1IZMPjpX4tOOuQ",
+            "capture_base":"IAKfY-vUaevuIqDQreQyd6YYpALJIH1IZMPjpX4tOOuQ",
             "language":"en",
             "name":"Example VC"
         }
@@ -89,8 +89,12 @@ And in the context of OCA Bundle, it adds the following constraints:
 JSONPath allows the use of Regular Expressions and the use of function extensions. Both introduce important security risks, which implementors should mitigate.
 This specification only uses the following parts of JSONPath:
 
-- Absolute [Child Segments](https://www.rfc-editor.org/rfc/rfc9535.html#name-child-segment) which starts with the [Root Identifier](https://www.rfc-editor.org/rfc/rfc9535.html#root-identifier)
+- Absolut [Child Segments](https://www.rfc-editor.org/rfc/rfc9535.html#name-child-segment) which starts with the [Root Identifier](https://www.rfc-editor.org/rfc/rfc9535.html#root-identifier)
 - The [Name Selector](https://www.rfc-editor.org/rfc/rfc9535.html#name-name-selector), [Wildcard Selector](https://www.rfc-editor.org/rfc/rfc9535.html#name-wildcard-selector) and the [Index Selector](https://www.rfc-editor.org/rfc/rfc9535.html#name-index-selector)
+
+#### SD-JWT VC Consideration
+
+The Data Source Mapping Overlay **MUST** be applied to SD-JWT VCs after their claims are disclosed, and the claims **MUST** be seen as hierarchical siblings to their respective `_sd` claim.
 
 ### Aries Branding Overlay update proposal
 The core OCA specification does not include a way to add visualization metadata. The [Hyperledger Aries project](https://github.com/hyperledger/aries-rfcs/blob/main/features/0755-oca-for-aries/README.md#aries-specific-branding-overlay) has addressed this gap by proposing a Branding Overlay which mimics the options of visualizing data element about the branding of a given verifiable credential.
@@ -126,7 +130,7 @@ And in the context of OCA Bundle, it adds the following constraints:
 ```
 
 > [!NOTE]
-> It is up to the Wallet implementors to interpret the Branding Overlay attributes they need to implement their design and style guidelines.
+> It is up to the Wallet implementors to interpret the Branding Overlay attributes they need to implement their design und style guidelines.
 
 <a id="branding-overlay-templating"></a>
 
@@ -194,7 +198,7 @@ OCA bundle
     "capture_bases":[
         {
             "type":"spec/capture_base/1.0",
-            "digest":"IJJU+BJDRi+5T3oTTXhfa/+v5CCGWYG2x9oY/k8+k5Fu",
+            "digest":"IJJU-BJDRi-5T3oTTXhfa_-v5CCGWYG2x9oY_k8-k5Fu",
             "attributes":{
                 "id":"Text",
                 "name":"Text",
@@ -205,7 +209,7 @@ OCA bundle
     ],
     "overlays":[
         {
-            "capture_base":"IJJU+BJDRi+5T3oTTXhfa/+v5CCGWYG2x9oY/k8+k5Fu",
+            "capture_base":"IJJU-BJDRi-5T3oTTXhfa_-v5CCGWYG2x9oY_k8-k5Fu",
             "type":"extend/overlays/cluster_ordering/1.0",
             "language":"de",
             "cluster_order":{
@@ -250,7 +254,7 @@ The DateTime type is represented with the following constraints:
     "capture_bases":[
         {
             "type":"spec/capture_base/1.0",
-            "digest":"ICE4Oj4VNLZuYGv7Qm+3Z6F+ojQPMp/ke8LQdy38BdvH",
+            "digest":"ICE4Oj4VNLZuYGv7Qm-3Z6F-ojQPMp_ke8LQdy38BdvH",
             "attributes":{
                 "date":"DateTime"
             }
@@ -258,14 +262,14 @@ The DateTime type is represented with the following constraints:
     ],
     "overlays":[
         {
-            "capture_base":"ICE4Oj4VNLZuYGv7Qm+3Z6F+ojQPMp/ke8LQdy38BdvH",
+            "capture_base":"ICE4Oj4VNLZuYGv7Qm-3Z6F-ojQPMp_ke8LQdy38BdvH",
             "type":"spec/overlays/format/1.0",
             "attribute_formats":{
                 "date":"YYYY-MM-DDTHH:mm:ssZ"
             }
         },
         {
-            "capture_base":"ICE4Oj4VNLZuYGv7Qm+3Z6F+ojQPMp/ke8LQdy38BdvH",
+            "capture_base":"ICE4Oj4VNLZuYGv7Qm-3Z6F-ojQPMp_ke8LQdy38BdvH",
             "type":"spec/overlays/standard/1.0",
             "attr_standards":{
                 "date":"urn:iso:std:iso:8601"
@@ -290,7 +294,7 @@ Data URLs are represented with the following constraints:
     "capture_bases":[
         {
             "type":"spec/capture_base/1.0",
-            "digest":"IFM8RfatBApjAWtUuoPdHBw7u+poW49aGCMSgoK1pwu5",
+            "digest":"IFM8RfatBApjAWtUuoPdHBw7u-poW49aGCMSgoK1pwu5",
             "attributes":{
                 "picture":"Text"
             }
@@ -298,7 +302,7 @@ Data URLs are represented with the following constraints:
     ],
     "overlays":[
         {
-            "capture_base":"IFM8RfatBApjAWtUuoPdHBw7u+poW49aGCMSgoK1pwu5",
+            "capture_base":"IFM8RfatBApjAWtUuoPdHBw7u-poW49aGCMSgoK1pwu5",
             "type":"spec/overlays/standard/1.0",
             "attr_standards":{
                 "picture":"urn:ietf:rfc:2397"
@@ -409,19 +413,19 @@ OCA bundle
     "capture_bases":[
         {
            "type":"spec/capture_base/1.0",
-            "digest":"IDif6Jd863C/YYjp1cHFCTAUr1/TzZSS1l+pv21Q56qs",
+            "digest":"IDif6Jd863C_YYjp1cHFCTAUr1_TzZSS1l-pv21Q56qs",
             "attributes":{
                 "firstname":"Text",
                 "lastname":"Text",
                 "address_street":"Text",
                 "address_city":"Text",
                 "address_country":"Text",
-                "pets":"Array[refs:IKLvtGx1NU0007DUTTmI/6Zw+hnGRFicZ5R4vAxg4j2j]"
+                "pets":"Array[refs:IKLvtGx1NU0007DUTTmI_6Zw-hnGRFicZ5R4vAxg4j2j]"
             }
         },
         {
            "type":"spec/capture_base/1.0",
-            "digest":"IKLvtGx1NU0007DUTTmI/6Zw+hnGRFicZ5R4vAxg4j2j",
+            "digest":"IKLvtGx1NU0007DUTTmI_6Zw-hnGRFicZ5R4vAxg4j2j",
             "attributes":{
                 "name":"Text",
                 "race":"Text"
@@ -431,7 +435,7 @@ OCA bundle
     "overlays":[
         {
             "type":"extend/overlays/data_source/1.0",
-            "capture_base":"IDif6Jd863C/YYjp1cHFCTAUr1/TzZSS1l+pv21Q56qs",
+            "capture_base":"IDif6Jd863C_YYjp1cHFCTAUr1_TzZSS1l-pv21Q56qs",
             "format":"vc+sd-jwt",
             "attribute_sources":{
                 "firstname":"$.firstname",
@@ -444,7 +448,7 @@ OCA bundle
         },
         {
             "type":"extend/overlays/data_source/1.0",
-            "capture_base":"IKLvtGx1NU0007DUTTmI/6Zw+hnGRFicZ5R4vAxg4j2j",
+            "capture_base":"IKLvtGx1NU0007DUTTmI_6Zw-hnGRFicZ5R4vAxg4j2j",
             "format":"vc+sd-jwt",
             "attribute_sources":{
                 "name":"$.pets[*].name",
@@ -453,7 +457,7 @@ OCA bundle
         },
         {
             "type":"aries/overlays/branding/1.1",
-            "capture_base":"IDif6Jd863C/YYjp1cHFCTAUr1/TzZSS1l+pv21Q56qs",
+            "capture_base":"IDif6Jd863C_YYjp1cHFCTAUr1_TzZSS1l-pv21Q56qs",
             "language":"en",
             "theme":"light",
             "logo":"data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGbSURBVHgBvVaBUcMwDFQ4BjAbmA06QjYgGzQbkA1aJmg3yHWCwgSGCVImcJkg3UDYjVMUI6VxW/g7X+701kuWZTsAI0DEwo0GO9RuKMKpYGvdsH4uXALnqPE3DOFrhs8hFc5pizxyN2YCZyS9+5FYuWCfgYzZJYFUon2UuwMZ+xG7xO3gXKBQ95xwGyHIuxuvbhwY/oPo+WbSQAyKtDCGVtWM3aMifmXENcGnb3uqp6Q2NZHgEpnWDQl5rsJwxgS9NTBZ98ghEdgdcA6t3yOpJQtGSIUVekHN+DwJWsfSWSGLmsm2xWHti2iOEbQav6I3IYtPIqDdZwvDc3K0OY5W5EvQ2vUb2jJZaBLIogxL5pUcf9LC7gzZQPigJXFe4HmsyPw1sRvk9jKsjj4Fc5yOOfFTyDcLcEGfMR0VpACnlUvC4j+C9FjFulkURLuPhdvgIcuy08UbPxMabofBjRMHOsAfIS6db21fOgXXYe/K9kgNgxWFmr7A9dhMmoXD001h8OcvSPpLWkIKsLu3THC2yBxG7B48S5IoJb1vHubbPPxs2qsAAAAASUVORK5CYII=",
@@ -462,12 +466,12 @@ OCA bundle
         },
         {
             "type":"spec/overlays/meta/1.0",
-            "capture_base":"IDif6Jd863C/YYjp1cHFCTAUr1/TzZSS1l+pv21Q56qs",
+            "capture_base":"IDif6Jd863C_YYjp1cHFCTAUr1_TzZSS1l-pv21Q56qs",
             "language":"en",
             "name":"Pet Permit"
         },
         {
-            "capture_base":"IDif6Jd863C/YYjp1cHFCTAUr1/TzZSS1l+pv21Q56qs",
+            "capture_base":"IDif6Jd863C_YYjp1cHFCTAUr1_TzZSS1l-pv21Q56qs",
             "type":"extend/overlays/cluster_ordering/1.0",
             "language":"en",
             "cluster_order":{
@@ -492,7 +496,7 @@ OCA bundle
             }
         },
         {
-            "capture_base":"IKLvtGx1NU0007DUTTmI/6Zw+hnGRFicZ5R4vAxg4j2j",
+            "capture_base":"IKLvtGx1NU0007DUTTmI_6Zw-hnGRFicZ5R4vAxg4j2j",
             "type":"spec/overlays/label/1.0",
             "language":"en",
             "attribute_labels":{
@@ -501,7 +505,7 @@ OCA bundle
             }
         },
         {
-            "capture_base":"IDif6Jd863C/YYjp1cHFCTAUr1/TzZSS1l+pv21Q56qs",
+            "capture_base":"IDif6Jd863C_YYjp1cHFCTAUr1_TzZSS1l-pv21Q56qs",
             "type":"spec/overlays/label/1.0",
             "language":"en",
             "attribute_labels":{
@@ -513,7 +517,7 @@ OCA bundle
             }
         },
         {
-            "capture_base":"IKLvtGx1NU0007DUTTmI/6Zw+hnGRFicZ5R4vAxg4j2j",
+            "capture_base":"IKLvtGx1NU0007DUTTmI_6Zw-hnGRFicZ5R4vAxg4j2j",
             "type":"extend/overlays/cluster_ordering/1.0",
             "language":"en",
             "cluster_order":{
@@ -617,7 +621,7 @@ A [CESR SHA-256 JavaScript implementation](./appendixes/cesr-sha256-encoder.md) 
     ```json
     {
         "type":"spec/capture_base/1.0",
-        "digest":"IBYzBHEN4moeVO/aQtW/DbDoQd+30BgeJQMyfsRzoUFI",
+        "digest":"IBYzBHEN4moeVO_aQtW_DbDoQd-30BgeJQMyfsRzoUFI",
         "attributes":{
             "name":"Text"
         }
@@ -631,7 +635,7 @@ A [CESR SHA-256 JavaScript implementation](./appendixes/cesr-sha256-encoder.md) 
         "capture_bases":[
             {
                 "type":"spec/capture_base/1.0",
-                "digest":"IBYzBHEN4moeVO/aQtW/DbDoQd+30BgeJQMyfsRzoUFI",
+                "digest":"IBYzBHEN4moeVO_aQtW_DbDoQd-30BgeJQMyfsRzoUFI",
                 "attributes":{
                     "name":"Text"
                 }
@@ -639,7 +643,7 @@ A [CESR SHA-256 JavaScript implementation](./appendixes/cesr-sha256-encoder.md) 
         ],
         "overlays":[
             {
-                "capture_base":"IBYzBHEN4moeVO/aQtW/DbDoQd+30BgeJQMyfsRzoUFI",
+                "capture_base":"IBYzBHEN4moeVO_aQtW_DbDoQd-30BgeJQMyfsRzoUFI",
                 "type":"spec/overlays/label/1.0",
                 "language":"fr-CH",
                 "attribute_labels":{
@@ -659,7 +663,7 @@ After those steps the following content is generated:
     "capture_bases":[
         {
             "type":"spec/capture_base/1.0",
-            "digest":"IBYzBHEN4moeVO/aQtW/DbDoQd+30BgeJQMyfsRzoUFI",
+            "digest":"IBYzBHEN4moeVO_aQtW_DbDoQd-30BgeJQMyfsRzoUFI",
             "attributes":{
                 "name":"Text"
             }
@@ -667,7 +671,7 @@ After those steps the following content is generated:
     ],
     "overlays":[
         {
-            "capture_base":"IBYzBHEN4moeVO/aQtW/DbDoQd+30BgeJQMyfsRzoUFI",
+            "capture_base":"IBYzBHEN4moeVO_aQtW_DbDoQd-30BgeJQMyfsRzoUFI",
             "type":"spec/overlays/label/1.0",
             "language":"fr-CH",
             "attribute_labels":{
