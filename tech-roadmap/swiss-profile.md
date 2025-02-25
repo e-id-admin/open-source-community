@@ -58,13 +58,15 @@ The following table defines which specification must be supported by an actor (I
 | Trust Protocol    | **MAY**  | **MUST** | **MUST** |
 
 ## Issuer & Verifier Identification
-Issuers and Verifiers use [DID:TDW](https://identity.foundation/trustdidweb/) version 0.3 as identifiers.
+Issuers and Verifiers use [DID:TDW](https://identity.foundation/didwebvh/v0.3/) version 0.3 as identifiers.
 
 ### DID:TDW/DID:WEBVH
 Implementations of this profile:
 
 - **MUST** set `portable` to `false` in the first DID log entry.
 - **MUST** set `method` to `did:tdw:0.3` in the first DID log entry.
+- **MUST** set `updatekeys` to `null`, when the DID log entry stays valid but should not be updated anymore.
+- **MUST** set `deactivated` to `true`, when the DID is not valid anymore.
 
 #### DID Document Format
 
@@ -95,13 +97,14 @@ Implementations of this profile:
 This chapter maps to OpenID4VCI draft 13
 
 ### Credential Offer
-- The Grant Type `urn:ietf:params:oauth:grant-type:pre-authorized_code` **MUST** be supported as defined in Section 4.1.1 in [OpenID4VCI](https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0-ID1.html).
+- The Grant Type `urn:ietf:params:oauth:grant-type:pre-authorized_code` **MUST** be supported as defined in Section 4.1.1 in [OpenID4VCI](https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0-13.html).
 - As a way to invoke the Wallet, the custom URL scheme `openid-credential-offer://` **MUST** be supported.
 
 Both sending Credential Offer same-device and cross-device are supported.
 
 ### Credential Issuer Metadata
-- `credential_issuer` **MAY** be defined
+- `credential_issuer` **MUST** be defined
+- `credential_endpoint` **MUST** be defined
 - `display` **MAY** contain the following objects
     - `name` **MAY** be the self-attested name of the Issuer
     - `logo` **MAY** contain the self-attested logo of the Issuer.
@@ -111,8 +114,7 @@ Both sending Credential Offer same-device and cross-device are supported.
 - `credential_configurations_supported` **MUST** contain
     - `format` **MUST** be `vc+sd-jwt`
     - `cryptographic_binding_methods_supported` **MUST** be `jwk`
-    - `credential_signing_alg_values_supported` **MUST** be
-        - `ES256`
+    - `credential_signing_alg_values_supported` **MUST** be `ES256`
     - `proof_types_supported` **MAY** be defined
         -  **MUST** contain `jwt`.
         - `proof_signing_alg_values_supported` **MUST** contain at least `ES256`
@@ -121,7 +123,7 @@ Both sending Credential Offer same-device and cross-device are supported.
         - `logo` **MAY** contain the self-attested logo of the credential.
             - `uri` **MUST** be a DATA URL with mime-type `image/png` or `image/jpg`
             - `alt_text` **MAY** be a text that describes the logo
-        - `locale` **MAY** be the locale of the self-attested credetial metadata
+        - `locale` **MAY** be the locale of the self-attested credential metadata
         - `description` **MAY** be defined
         - `background_color` **MAY** be defined
 
@@ -189,7 +191,9 @@ This chapter maps to OpenID4VP draft 20
             - `format` **MAY** be defined, when defined **MUST** be `vc+sd-jwt`.
             - `constraints` **MAY** be defined, when defined **MUST** contain object `fields` with the following properties
                 - `path` **MUST** be defined
-                - `filter` **MAY** be defined to be used with the `vct` claim from the SD-JWT VC profile
+                - `filter` **MAY** be defined to be used with the `vct` claim from the SD-JWT VC profile, when defined **MAY** contain the following properties
+                    - `type` **MUST** be defined
+                    - `const` **MAY** be defined
 
 ### Authorization Response
 
@@ -207,11 +211,11 @@ This chapter maps to OpenID4VP draft 20
 ## Credential Formats
 
 ### SD-JWT VC
-As credential format, SD-JWT VCs as defined in [ietf-oauth-sd-jwt-vc](https://datatracker.ietf.org/doc/draft-ietf-oauth-sd-jwt-vc/) **MUST** be supported.
+As credential format, SD-JWT VCs as defined in [ietf-oauth-sd-jwt-vc](https://www.ietf.org/archive/id/draft-ietf-oauth-sd-jwt-vc-04.html) **MUST** be supported.
 
 In addition, this profile defines the following additional requirements.
 
-Compact serialization **MUST** be supported as defined in [ietf-oauth-selective-disclosure-jwt](https://datatracker.ietf.org/doc/draft-ietf-oauth-selective-disclosure-jwt/). 
+Compact serialization **MUST** be supported as defined in [ietf-oauth-selective-disclosure-jwt](https://www.ietf.org/archive/id/draft-ietf-oauth-selective-disclosure-jwt-10.html). 
 The following JWT Claims **MUST** be supported content
 
 | Claim  | SD-JWT     |
@@ -219,17 +223,21 @@ The following JWT Claims **MUST** be supported content
 | vct    | **MUST**   |
 | iss    | **MUST**   |
 | iat    | **SHOULD** |
+| nbf    | **SHOULD** |
 | exp    | **SHOULD** |
 | status | **SHOULD** |
 | sub    | **MAY**    |
 | cnf    | **MAY**    |
 
 - The Issuer **MUST NOT** make any of the JWT Claims in the table above to be selectively disclosable, so that they are always present in the SD-JWT-VC presented by the Wallet.
-- It is at the discretion of the Issuer whether to use `exp`, `iat` claims and/or a `status` claim to express the validity period of an SD-JWT-VC. The Wallet and the Verifier **MUST** support those mechanisms.
+- It is at the discretion of the Issuer whether to use `iat`, `nbf`, `exp` claims and/or a `status` claim to express the validity period of an SD-JWT-VC. The Wallet and the Verifier **MUST** support those mechanisms.
 - The `vct` claim **MUST** be defined and is treated as an unresolvable string.
 - The `iss` claim **MUST** be a DID. The `iss` value is used to obtain Issuer's signing key as defined in Section [Issuer identification and key resolution](#sd-jwt-did-resolution).
 - The `sub` claim **MAY** be used, if there is a requirement to provide the Subject's identifier assigned and maintained by the Issuer.
 - When The Issuer decides to use device binding, the `cnf` claim [RFC7800] **MUST** conform to the definition given in [Device Binding Chapter](#device-binding).
+- The Issuer **MUST** add additional claims as selectively disclosable whenever possible.
+
+This chapter maps to SD-JWT draft 10 and SD-JWT VC draft 4
 
 <a id="sd-jwt-did-resolution"></a>
 
@@ -240,13 +248,13 @@ The following JWT Claims **MUST** be supported content
 
 ###### Cryptographic Device Binding between Wallet and Verifier
 
-- For Cryptographic Device Binding, a KB-JWT, as defined in [I-D.ietf-oauth-sd-jwt-vc](https://www.ietf.org/archive/id/draft-ietf-oauth-selective-disclosure-jwt-12.html#name-key-binding-jwt), **MUST** be present when presenting an SD-JWT VC.
+- For Cryptographic Device Binding, a KB-JWT, as defined in [I-D.ietf-oauth-sd-jwt-vc](https://www.ietf.org/archive/id/draft-ietf-oauth-selective-disclosure-jwt-10.html#name-key-binding-jwt), **MUST** be present when presenting an SD-JWT VC.
 
 > [!WARNING]
 > Issuers can issue low assurance VCs without Device Binding but they can become vulnerable to replay attacks. 
 
 #### OpenID4VC Credential Format Profile
-This section specifies how SD-JWT VCs as defined in [I-D.ietf-oauth-sd-jwt-vc](https://datatracker.ietf.org/doc/draft-ietf-oauth-sd-jwt-vc/) are used in conjunction with the OpenID4VC specifications.
+This section specifies how SD-JWT VCs as defined in [I-D.ietf-oauth-sd-jwt-vc](https://www.ietf.org/archive/id/draft-ietf-oauth-sd-jwt-vc-04.html) are used in conjunction with the OpenID4VC specifications.
 
 ##### Format Identifier
 The Credential format identifier is `vc+sd-jwt`. This format identifier is used in issuance and presentation requests.
@@ -254,7 +262,7 @@ The Credential format identifier is `vc+sd-jwt`. This format identifier is used 
 <a id="sd-jwt-cred-def"></a>
 
 ##### Credential Issuer Metadata
-The following additional Credential Issuer metadata are defined for this Credential format to be used in addition to those defined in Section 10.2 of [OpenID4VCI](https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0.html#name-credential-issuer-metadata).
+The following additional Credential Issuer metadata are defined for this Credential format to be used in addition to those defined in Section 11.2 of [OpenID4VCI](https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0-13.html#name-credential-issuer-metadata).
 
 - `credential_configuations_supported` **MUST** contain
     - `vct` **MUST** be defined.
@@ -271,10 +279,12 @@ An Issuer **MAY** at their discretion add a status entry to their verifiable cre
 The credential status specification to use depends on the credential format as follow:
 | Credential format | Specification         |
 | ------------------| ----------------------|
-| SD-JWT VC         | [Token Status List](https://datatracker.ietf.org/doc/draft-ietf-oauth-status-list/) <br/> JSON format only    |
+| SD-JWT VC         | [Token Status List](https://www.ietf.org/archive/id/draft-ietf-oauth-status-list-03.html) <br/> JSON format only    |
+
+This chapter maps to Token Status List draft 3
 
 ## Trust Protocol
-- Wallets and Verifiers **MUST** support the SD-JWT VC representation of the [Trust Protocol based on VCs](./trust-protocol.md).
+- Wallets and Verifiers **MUST** support the SD-JWT VC representation of the [Trust Protocol based on VCs](https://github.com/e-id-admin/open-source-community/blob/main/tech-roadmap/rfcs/trust-protocol/trust-protocol.md).
 - Trust Statements **MUST** be defined as follows:
     - `kid` from the JOSE header **MUST** be an absolute `did:tdw` with a key reference.
     - `iss` and `sub` from the JWT body **MUST** be a `did:tdw`.
@@ -296,22 +306,22 @@ Measures to address this challenge are envisioned for a later release, for examp
 ## References
 
 **DID:TDW/DID:WEBVH**<br/>
-https://identity.foundation/trustdidweb/
+https://identity.foundation/didwebvh/v0.3/
 
 **OpenID4VCI**<br/>
-https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0.html
+https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0-13.html
 
 **OpenID4VP**<br/>
-https://openid.net/specs/openid-4-verifiable-presentations-1_0.html
+https://openid.net/specs/openid-4-verifiable-presentations-1_0-20.html
 
 **Trust Protocol based on VCs**<br/>
 https://github.com/e-id-admin/open-source-community/blob/main/tech-roadmap/rfcs/trust-protocol/trust-protocol.md
 
 **SD-JWT**<br/>
-https://datatracker.ietf.org/doc/draft-ietf-oauth-selective-disclosure-jwt/
+https://www.ietf.org/archive/id/draft-ietf-oauth-selective-disclosure-jwt-10.html
 
 **SD-JWT VC**<br/>
-https://datatracker.ietf.org/doc/draft-ietf-oauth-sd-jwt-vc/
+https://www.ietf.org/archive/id/draft-ietf-oauth-sd-jwt-vc-04.html
 
 **Token Status List**<br/>
-https://datatracker.ietf.org/doc/draft-ietf-oauth-status-list/
+https://www.ietf.org/archive/id/draft-ietf-oauth-status-list-03.html
