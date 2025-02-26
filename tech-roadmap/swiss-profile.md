@@ -284,11 +284,13 @@ The credential status specification to use depends on the credential format as f
 This chapter maps to Token Status List draft 3
 
 ## Trust Protocol
-- Wallets and Verifiers **MUST** support the SD-JWT VC representation of the [Trust Protocol based on VCs](https://github.com/e-id-admin/open-source-community/blob/main/tech-roadmap/rfcs/trust-protocol/trust-protocol.md).
+- Wallets and Verifiers **MUST** support the SD-JWT VC representation of the [Trust Protocol based on VCs](https://github.com/e-id-admin/open-source-community/blob/main/tech-roadmap/rfcs/trust-protocol/trust-protocol-v0.1.md).
 - Trust Statements **MUST** be defined as follows:
     - `kid` from the JOSE header **MUST** be an absolute `did:tdw` with a key reference.
     - `iss` and `sub` from the JWT body **MUST** be a `did:tdw`.
-- The Trust Statement `TrustStatementIdentityV1` **MUST** be supported.
+- The Trust Statement `TrustStatementMetadataV1` **MUST** be supported.
+
+This chapter maps to Trust Protocol based on VCs v0.1
 
 ## Crypto Suites
 Issuers, Wallets and Verifiers **MUST** support P-256 (secp256r1) as a key type with `ES256` JWT algorithm for signing and signature validation whenever this profiles requires to do so.
@@ -315,7 +317,7 @@ https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0-13.html
 https://openid.net/specs/openid-4-verifiable-presentations-1_0-20.html
 
 **Trust Protocol based on VCs**<br/>
-https://github.com/e-id-admin/open-source-community/blob/main/tech-roadmap/rfcs/trust-protocol/trust-protocol.md
+https://github.com/e-id-admin/open-source-community/blob/main/tech-roadmap/rfcs/trust-protocol/trust-protocol-v0.1.md
 
 **SD-JWT**<br/>
 https://www.ietf.org/archive/id/draft-ietf-oauth-selective-disclosure-jwt-10.html
