@@ -3,6 +3,8 @@
 Status: Draft<br/>
 Version: 0.1<br/>
 
+-> For updates, please refer to https://swiyu-admin-ch.github.io/specifications/interoperability-profile/
+
 ## Abstract
 This document defines the technical profile of the Swiss Public Beta Trust Infrastructure. As such it shows how the referenced specifications can, and sometimes have to be, implemented in the context of the Swiss Public Beta Trust Infrastructure.
 
@@ -328,3 +330,4 @@ https://www.ietf.org/archive/id/draft-ietf-oauth-sd-jwt-vc-04.html
 
 **Token Status List**<br/>
 https://www.ietf.org/archive/id/draft-ietf-oauth-status-list-03.html
+
