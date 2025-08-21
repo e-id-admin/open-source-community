@@ -1,4 +1,8 @@
-# Swiss e-ID and trust infrastructure: Roadmap (work in progress)
+# Swiss e-ID and trust infrastructure: Roadmap (initial version - deprecated)
+
+
+The current and ongoing roadmap and the specifications can be found on the [swiyu technical documentation website](https://swiyu-admin-ch.github.io/roadmap/).
+
 
 #### Table of contents
 - [Introduction](#Introduction)
